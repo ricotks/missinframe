@@ -1,0 +1,11 @@
+---
+import BaseLayout from './BaseLayout.astro';
+const { title = 'Post sem título' } = Astro.props;
+---
+<BaseLayout>
+  <a class="back-button" href="/">← ಠ</a>
+  <h1>{title}</h1>
+  <article>
+    <slot />
+  </article>
+</BaseLayout>
