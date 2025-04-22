@@ -14,13 +14,14 @@ body {
   }
   
   a {
-    color: #0055aa;
+    color: #555;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
   
-  a:hover {
+  a:not(.back-button):hover {
     text-decoration: underline;
+    font-weight: bolder;
   }
   
   ul {
@@ -33,13 +34,7 @@ body {
     margin-bottom: 0.8rem;
   }
   
-  .back-button {
-    display: inline-block;
-    margin-bottom: 2rem;
-    text-decoration: none;
-    color: #0055aa;
-    font-size: 0.95rem;
-  }
+
 
   .frame {
     border: 6px solid #333;
@@ -64,10 +59,6 @@ body {
     display: flex;
     align-items: center;
     gap: 1rem;
-    background: #fdfaf4;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
   }
   
   .footer img {
@@ -79,4 +70,43 @@ body {
   
   .footer a:hover img {
     opacity: 0.7;
+  }
+
+  .footer-author {
+    text-decoration: none;
+    color: #555;
+    font-size: 0.9rem;
+  }
+  
+  .footer-author:hover {
+    color: #555;
+    font-weight: bolder;
+  }
+
+
+  .back-button {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 1rem;
+  }
+  
+  .frame-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.2rem;
+    height: 0.8rem;
+    border: 3px solid #333;
+    border-radius: 2px;
+    font-size: 0.9rem;
+    color: transparent;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .back-button:hover .frame-icon {
+    color: #333;
+    text-decoration: none;
   }

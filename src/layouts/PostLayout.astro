@@ -3,9 +3,28 @@ import BaseLayout from './BaseLayout.astro';
 const { title = 'Post sem título' } = Astro.props;
 ---
 <BaseLayout>
-  <a class="back-button" href="/">← ಠ</a>
+  <a class="back-button" href="/" aria-label="Back to Home">
+    <span class="frame-icon">←</span>
+  </a>
   <h1>{title}</h1>
   <article>
     <slot />
   </article>
+
+  <footer class="footer">
+    <p>
+      A Frame by 
+      <a href="/rico" class="footer-author">Rico</a>, 2025
+    </p>
+    <div class="social-links">
+      <a href="https://bsky.app/profile/ricotks.bsky.social" target="_blank" aria-label="BlueSky">
+        <img src="/icons/bsky.svg" alt="BlueSky" />
+      </a>
+      <a href="https://linkedin.com/in/ricokatayama" target="_blank" aria-label="LinkedIn">
+        <img src="/icons/linkedin.svg" alt="LinkedIn" />
+      </a>
+    </div>
+  </footer>
+
+
 </BaseLayout>

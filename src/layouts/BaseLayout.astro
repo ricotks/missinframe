@@ -7,20 +7,18 @@ const { title = 'missin\'frame' } = Astro.props;
     <title>{title}</title>
     <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles/global.css">
+    <style>
+      .social-links a {
+        margin-right: 0.5rem;
+      }
+      .social-links a:last-child {
+        margin-right: 0;
+      }
+    </style>
   </head>
   <body>
     <slot />
-    <footer class="footer">
-        <p>Words by Rico</p>
-        <div class="social-links">
-          <a href="https://bsky.app/profile/ricotks.bsky.social" target="_blank" aria-label="BlueSky">
-            <img src="/icons/bsky.svg" alt="BlueSky" />
-          </a>
-          <a href="https://linkedin.com/in/ricokatayama" target="_blank" aria-label="LinkedIn">
-            <img src="/icons/linkedin.svg" alt="LinkedIn" />
-          </a>
-        </div>
-      </footer>
+
 
   </body>
 </html>
