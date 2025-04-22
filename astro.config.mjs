@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
-import { astroMarkdownRemark } from '@astrojs/markdown-remark';
 
 export default defineConfig({
-  integrations: [astroMarkdownRemark()],
+  site: 'https://missinframe.com', // ou o seu domínio do GitHub Pages se for o caso
+  outDir: 'dist',
 });
